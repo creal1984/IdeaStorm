@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  nivelinversion: 1
+  ventajascomparativas: MyText
+  calificacion: 1
+  resumen: MyText
+  ranking: 1
+  idusuario: 1
+
+two:
+  titulo: MyString
+  nivelinversion: 1
+  ventajascomparativas: MyText
+  calificacion: 1
+  resumen: MyText
+  ranking: 1
+  idusuario: 1

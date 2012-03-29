@@ -1,0 +1,26 @@
+<%=  flash[:notice] %>
+<h1>Bienvenido a IdeaStorm</h1>
+<h1>Los  Ultimos 20 Proyectos</h1>
+<% @cont = 0 %>
+<% @proyecto.each do |p| %>
+  <% if @cont < 20 %>
+   <p>
+   <%= p.titulo%>
+
+   <%=link_to "Ver mas.."  , p %>
+   </p>
+   <% end %>
+<% @cont = @cont + 1 %>
+<% end %>
+<h1>Los 20 Proyectos mas Populares</h1>
+<% @cont = 0 %>
+<% @proyecto2.each do |p| %>
+  <% if @cont < 20 %>
+   <p>
+   <%= p.titulo%>
+
+   <%=link_to "Ver mas.."  , p %>
+   </p>
+   <% end %>
+<% @cont = @cont + 1 %>
+<% end %>

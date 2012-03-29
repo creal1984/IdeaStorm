@@ -1,0 +1,29 @@
+
+<%= form_for :user do |f| %>
+<%= error_messages_for "user"  %>
+    <p>
+      <%= f.label :nombre %>
+      <%=  f.text_field :nombre%>
+    </p>
+    <p>
+      <%= f.label :apellido %>
+      <%=  f.text_field :apellido%>
+    </p>
+
+    <p>
+      <%= f.label :rut %>
+      <%=  f.text_field :rut%>
+    </p>
+
+    <p>
+      <%= f.label :email %>
+      <%=  f.text_field :email%>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%=  f.password_field :password%>
+    </p>
+    <p>
+      <%=  f.submit "Guardar" %>
+    </p>
+  <% end %>

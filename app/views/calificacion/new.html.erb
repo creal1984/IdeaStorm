@@ -1,0 +1,19 @@
+
+  <%= form_for :calificacion do |c| %>
+      error_messages_for "proyecto"  
+    <p>
+      <%= c.label "nota del 1 al 10" %>
+      <%=  c.text_field :nota%>
+    </p>
+    <p>
+      <%= c.label "Ingrese su comentario" %>
+      <%=  c.text_field :comentario%>
+    </p>
+    
+    <p>
+      <%=  c.submit "Enviar"%>
+    </p>
+  
+  <% end %>
+   
+

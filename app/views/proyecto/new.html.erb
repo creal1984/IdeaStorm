@@ -1,0 +1,26 @@
+<h1>Complete los campos de Proyecto</h1>
+<%= form_for :proyecto do |f| %>
+    <p>
+      <%= f.label "Titulo" %>
+      <%=  f.text_field :titulo%>
+    </p>
+    <p>
+      <%= f.label "Nivel de Inversion" %>
+      <%=  f.text_field :nivelinversion%>
+    </p>
+
+    <p>
+      <%= f.label "Ventajas Comparativas" %>
+      <%=  f.text_field :ventajascomparativas%>
+    </p>
+
+    <p>
+      <%= f.label "Resumen" %>
+      <%=  f.text_field :resumen%>
+   
+    </p>
+    <p>
+      <%=  f.submit "Enviar" %>
+    </p>
+  
+  <% end %>

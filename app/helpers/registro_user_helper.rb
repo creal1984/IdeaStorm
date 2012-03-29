@@ -1,0 +1,2 @@
+module RegistroUserHelper
+end

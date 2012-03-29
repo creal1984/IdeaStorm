@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  idproyecto: 1
+  nombreusuario: MyString
+  comentario: MyString
+
+two:
+  idproyecto: 1
+  nombreusuario: MyString
+  comentario: MyString

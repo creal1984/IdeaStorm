@@ -1,0 +1,10 @@
+
+<h1> <%=@proyecto.titulo%> </h1>
+<br><%=  @proyecto.resumen %></br>
+<%  $idproyecto = @proyecto.id%>
+<% if  session[:user_id] %>
+ <%if @proyecto.idusuario != session[:user_id] %>
+  <%=  link_to "calificar",ingresocalificacion_url %>
+
+ <%end%>
+<%end%>

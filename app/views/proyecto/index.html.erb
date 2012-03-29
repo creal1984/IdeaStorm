@@ -1,0 +1,15 @@
+<h1>Proyectos</h1>
+<% p_user=session[:user_id] %>
+<% user = User.find_by_id(p_user)%>
+<% @proyecto.each do |p| %>
+ <%if p.idusuario == p_user  %> 
+  <p>
+  <%= p.titulo%>
+
+  <%=link_to "Ver mas.."  , p %>
+  </p>
+  <% end %>
+<% end %>
+
+
+

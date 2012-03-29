@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%@titulo%> </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="pagina">
+    <div id="cabecera">
+      <h1><%=@titulo%></h1>
+    </div>
+    <div id="menu">
+    <%=link_to_unless_current "Principal" , home_url %>
+    <% if  not session[:user_id] %>
+      
+    <%=link_to_unless_current "Login" , login_url %>
+    <%=link_to_unless_current "Registro Usuario" , registro_url %>
+    <% else %>
+    <%=link_to_unless_current "Calificar Proyecto" ,calificacionproyecto_url  %>
+    <%=link_to_unless_current "Ficha Proyecto" , fichaproyectousuario_url %>
+    <%=link_to_unless_current "Perfil Usuario" , perfilusuario_url %>
+    <%=link_to_unless_current "Publicar Proyecto" , ingresoproyecto_url  %>
+    <%=link_to_unless_current "Salir" , logout_url %>
+    <% end  %>
+     <div id="contenido">
+      <%=yield %>
+  </div>
+  <%if ENV["RAILS_ENV"] == "development"%>
+    <%=  debug(params)%>
+    <% end %>
+  </div>
+  
+</body>
+</html>

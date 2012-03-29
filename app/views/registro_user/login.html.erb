@@ -1,0 +1,16 @@
+<%=  flash[:notice] %>
+<%= form_for :user do |f| %>
+<%= error_messages_for "user"  %>
+
+    <p>
+      <%= f.label :email %>
+      <%=  f.text_field :email%>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%=  f.password_field :password%>
+    </p>
+    <p>
+      <%=  f.submit "Entrar" %>
+    </p>
+  <% end %>
